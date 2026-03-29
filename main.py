@@ -172,7 +172,7 @@ with tab3:
 
 with tab4:
     st.header("AI Assistant")
-    st.info("Note: This is not a conversational agent so it dosent answer followup questions")
+    st.info("Note: This is not a conversational agent so it doesn't answer followup questions")
     if "messages" not in st.session_state:
         st.session_state.messages=[]
     for message in st.session_state.messages:
@@ -184,7 +184,7 @@ with tab4:
                 st.markdown(prompt)
             st.session_state.messages.append({"role":"user","content":prompt})
             with st.chat_message("assistant"):
-                with st.spinner("Thiking..."):
+                with st.spinner("Thinking..."):
                     llm=ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=user_key, temperature=0.2)
                     request=f'''
                         DATA PROVIDED:BRAND Data{brand}, PRODUCT DATA:{product}, UNSER PROMPT{prompt}
