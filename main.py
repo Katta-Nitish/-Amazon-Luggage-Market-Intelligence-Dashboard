@@ -24,7 +24,7 @@ filtered_brands=brand[brand["brand"].isin(selected_brands)]
 filtered_products=product[product["brand"].isin(selected_brands)]
 st.sidebar.divider()
 user_key=st.sidebar.text_input("Enter Google Api Key",type="password")
-st.caption("Get your free Gemini API key [here](https://aistudio.google.com/app/apikey) to enable the Ai Assistant.")
+st.sidebar.caption("Get your free Gemini API key [here](https://aistudio.google.com/app/apikey) to enable the Ai Assistant.")
 
 tab1,tab2,tab3,tab4=st.tabs(["📊 Executive Summary", "🥊 Comparison", "🔍 Product Deep Dive","🤖 AI Assistant"])
 
